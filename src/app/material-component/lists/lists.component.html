@@ -1,0 +1,100 @@
+
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- Card column -->
+  <div fxFlex.gt-sm="100%" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Proyectos <span class="bg-success text-white rounded font-12 pl-5 pr-5">Conoce los proyectos que puedes apoyar</span></mat-card-title>
+        <mat-card-subtitle>Los proyectos que tenemos disponibles para donaciones </mat-card-subtitle>
+
+        <!-- Search form -->
+        <form class="form-inline md-form mr-auto mb-4">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button mdbBtn size="sm" gradient="aqua" rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit">Search</button>
+        </form>
+      </mat-card-content>
+
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="VIGENTES">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="200%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Proyectos Vigentes</mat-card-title>
+                  <mat-card-subtitle>Algunos de los proyectos que aun se puede donar</mat-card-subtitle>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
+                      <h3 matLine>{{message.from}}</h3>
+                      <p matLine class="text-muted">{{message.content}}</p>
+                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
+                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
+                      <button mat-raised-button color="primary">Donar</button>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="EN PROCESO">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Proyectos en proceso</mat-card-title>
+                  <mat-card-subtitle>Proyectos en proceso de seleccion</mat-card-subtitle>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
+                      <h3 matLine>{{message.from}}</h3>
+                      <p matLine class="text-muted">{{message.content}}</p>
+                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
+                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
+                      <button mat-raised-button color="primary">Donar</button>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="FINALIZADOS">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Proyectos Finalizados</mat-card-title>
+                  <mat-card-subtitle>Algunos de los proyectos que ya finalizaron</mat-card-subtitle>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
+                      <h3 matLine>{{message.from}}</h3>
+                      <p matLine class="text-muted">{{message.content}}</p>
+                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
+                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
+                      <button mat-raised-button color="primary">Ver </button>
+                    </mat-list-item>
+
+
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- List with icons selection-->
+<!-- ============================================================== -->
+

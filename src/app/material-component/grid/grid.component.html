@@ -1,0 +1,134 @@
+
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- Card column -->
+  <div fxFlex.gt-sm="100%" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>WALIKI <span class="bg-success text-white rounded font-12 pl-5 pr-5">Conoce los proyectos que puedes apoyar</span></mat-card-title>
+        <mat-card-subtitle>Los proyectos que tenemos disponibles para donaciones </mat-card-subtitle>
+      </mat-card-content>
+
+      <mat-tab-group mat-align-tabs="center">
+        <!-- Primera columna PRoyectos -->
+        <mat-tab label="PROYECTOS">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="200%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-subtitle>Buscar proyectos publicados
+                    <mat-form-field class="example-form-field" appearance="fill">
+                      <mat-label>Desde</mat-label>
+                      <mat-date-range-input
+                        [formGroup]="campaignOne"
+                        [rangePicker]="campaignOnePicker"
+                        [comparisonStart]="campaignTwo.value.start"
+                        [comparisonEnd]="campaignTwo.value.end">
+                        <input matStartDate placeholder="Start date" formControlName="start">
+                        <input matEndDate placeholder="End date" formControlName="end">
+                      </mat-date-range-input>
+                      <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                      <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-form-field" appearance="fill">
+                      <mat-label>Hasta</mat-label>
+                      <mat-date-range-input
+                        [formGroup]="campaignTwo"
+                        [rangePicker]="campaignTwoPicker"
+                        [comparisonStart]="campaignOne.value.start"
+                        [comparisonEnd]="campaignOne.value.end">
+                        <input matStartDate placeholder="Start date" formControlName="start">
+                        <input matEndDate placeholder="End date" formControlName="end">
+                      </mat-date-range-input>
+                      <mat-datepicker-toggle matSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+                      <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary">Buscar</button>
+                  </mat-card-subtitle>
+
+
+                  <mat-list>
+                    <mat-list-item *ngFor="let proyectos of proyecto">
+                      <img mat-list-avatar [src]="proyectos.imagenProyecto" alt="Image of {{proyectos.nombreProyecto}}">
+                      <h3 matLine>{{proyectos.nombreProyecto}}</h3>
+                      <p matLine class="text-muted">{{proyectos.telefono}}</p>
+                      <p matLine class="text-muted">{{proyectos.cuenta}}</p>
+                      <p matLine class="text-muted">{{proyectos.direccion}}</p>
+                      <button mat-raised-button color="primary">Donar</button>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <!-- Segunda Columna -->
+          <mat-tab label="ARTESANOS">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Artesanos</mat-card-title>
+                  <mat-card-subtitle>
+                    <form>
+                      <div class="md-form active-pink active-pink-2 mb-3">
+                        <input class="form-control" type="search" id="search1" aria-label="Search" mdbInput>
+                        <label>.</label>
+                      </div>
+                    </form>
+
+                    <button mat-raised-button color="primary">Buscar</button>
+                  </mat-card-subtitle>
+                  <mat-card-subtitle>
+                    Artesanos registrados
+                  </mat-card-subtitle>
+                  <mat-list>
+                    <mat-card-subtitle>
+                      Datos Personales del Artesano
+                    </mat-card-subtitle>
+                    <mat-list-item *ngFor="let message of messages">
+                      <img mat-list-avatar [src]="message.imagenPersona" alt="Image of {{message.nombrePersona}}">
+                      <h3 matLine>{{message.nombrePersona}}</h3>
+                      <p matLine class="text-muted">{{message.telefono}}</p>
+                      <p matLine class="text-muted">{{message.cuenta}}</p>
+                      <p matLine class="text-muted">{{message.direccion}}</p>
+                      <button mat-raised-button color="primary">Donar</button>
+                    </mat-list-item>
+
+
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <!-- Tercera Columna -->
+        <mat-tab label="DONADORES">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Proyectos Finalizados</mat-card-title>
+                  <mat-card-subtitle>Algunos de los proyectos que ya finalizaron</mat-card-subtitle>
+
+
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- List with icons selection-->
+<!-- ============================================================== -->
+
