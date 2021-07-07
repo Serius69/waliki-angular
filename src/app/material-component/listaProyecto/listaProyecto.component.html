@@ -13,7 +13,7 @@
         <!-- Search form -->
         <form class="form-inline md-form mr-auto mb-4">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button mdbBtn size="sm" gradient="aqua" rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit">Search</button>
+          <button mat-raised-button color="primary">Buscar</button>
         </form>
       </mat-card-content>
 
@@ -52,10 +52,12 @@
                       <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
                       <h3 matLine>{{message.from}}</h3>
                       <p matLine class="text-muted">{{message.content}}</p>
+
                       <p matLine class="text-muted">{{message.montoRequerido}}</p>
                       <p matLine class="text-muted">{{message.montoRecaudado}}</p>
                       <button mat-raised-button color="primary">Donar</button>
                     </mat-list-item>
+                    <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
                   </mat-list>
                 </mat-card-content>
               </mat-card>

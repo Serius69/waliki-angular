@@ -25,30 +25,6 @@
             </mat-card-content>
         </mat-tab>
         <!-- End Tab 1 -->
-      <!-- Tab 1 -->
-      <mat-tab label="Comentarios">
-        <mat-card-content>
-          <div class="d-flex no-blcok" *ngFor='let activity of activityData'>
-            <div class="m-r-20">
-              <img class="img-circle" width="50" [src]=activity.image alt="Image"> </div>
-            <div class="p-b-20 b-b m-b-30">
-              <h4 class="m-0">{{activity.name}}
-                <small class="text-muted">({{activity.commentTime}})</small>
-              </h4>
-              <p class="text-muted">{{activity.comment}}</p>
-
-              <div fxLayout="row wrap" *ngIf="activity.bottomImage !==''">
-                <div fxFlex.gt-sm="20" fxFlex="100">
-                  <img class="img-responsive rounded" [src]=activity.bottomImage  alt="Image">
-                </div>
-              </div>
-
-              <button  *ngIf="activity.bottomImage ===''" mat-raised-button color="{{activity.buttonColor}}">Check Now</button>
-
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-tab>
-      <!-- End Tab 1 -->
+      <
     </mat-tab-group>
 </mat-card>

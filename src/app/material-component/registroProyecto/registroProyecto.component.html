@@ -26,11 +26,11 @@
         <mat-expansion-panel-header>
           <mat-panel-title> Recaudacion </mat-panel-title>
           <mat-panel-description> Ingrese el monto a recaudar
-            <mat-icon>map</mat-icon>
+            <mat-icon>money</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field>
-          <input matInput placeholder="Country"> </mat-form-field>
+          <input matInput placeholder="Monto estimado que se desea recaudar"> </mat-form-field>
         <mat-action-row>
           <button mat-button color="warn" (click)="prevStep()">Previous</button>
           <button mat-button color="primary" (click)="nextStep()">Next</button>
@@ -53,20 +53,18 @@
         </mat-action-row>
       </mat-expansion-panel>
 
-      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+      <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle="true">
         <mat-expansion-panel-header>
           <mat-panel-title> Imagenes </mat-panel-title>
           <mat-panel-description> URLs de imagenes del proyecto
-            <mat-icon>date_range</mat-icon>
+            <mat-icon>image</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field>
-          <input matInput placeholder="URl-1" [matDatepicker]="picker" (focus)="picker.open()" readonly>
-          <input matInput placeholder="URl-2" [matDatepicker]="picker" (focus)="picker.open()" readonly> </mat-form-field>
-        <mat-datepicker #picker></mat-datepicker>
+          <input matInput placeholder="Monto estimado que se desea recaudar"> </mat-form-field>
         <mat-action-row>
           <button mat-button color="warn" (click)="prevStep()">Previous</button>
-          <button mat-button color="primary" (click)="nextStep()">End</button>
+          <button mat-button color="primary" (click)="nextStep()">Next</button>
         </mat-action-row>
       </mat-expansion-panel>
     </mat-accordion>

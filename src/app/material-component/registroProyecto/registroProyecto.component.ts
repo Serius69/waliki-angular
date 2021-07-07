@@ -4,14 +4,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  templateUrl: './registroProyecto.component.html',
+  styleUrls: ['./registroProyecto.component.scss']
 })
 
 
 
 
-export class ToolbarComponent {
+export class RegistroProyectoComponent {
   panelOpenState = false;
   step = 0;
 

@@ -15,16 +15,107 @@
   </mat-card-content>
 </mat-card>
 <!-- ============================================================== -->
-<!-- Fixed height Card Grid-->
+<!-- barra de progreso-->
 <!-- ============================================================== -->
 <div fxLayout="row">
   <div fxFlex.gt-sm="100%" >
     <mat-card>
       <mat-card-content>
-        <mat-card-title>Determinate progress-bar</mat-card-title>
-        <mat-card-subtitle><code>&lt;mat-progress-bar mode="determinate"&gt;</code> is a horizontal progress-bar for indicating progress and activity.</mat-card-subtitle>
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        <mat-card-title>Progreso del proyecto</mat-card-title>
+        <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
       </mat-card-content>
     </mat-card>
   </div>
 </div>
+<!-- ============================================================== -->
+<!-- -->
+<!-- ============================================================== -->
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Actualizaciones del proyecto <button mat-raised-button color="primary">Agregar Actualizacion</button></mat-card-title>
+    <mat-card-subtitle>Proyectos en proceso de seleccion</mat-card-subtitle>
+    <mat-list>
+      <mat-list-item *ngFor="let actualizaacion of actualizacion">
+        <img mat-list-avatar [src]="actualizaacion.imagen" alt="Image of {{actualizaacion.titulo}}">
+        <h3 matLine>{{actualizaacion.titulo}}</h3>
+        <p matLine class="text-muted">{{actualizaacion.descripcion}}</p>
+        <p matLine class="text-muted">{{actualizaacion.fecha}}</p>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- Card column -->
+  <div fxFlex.gt-sm="100%" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Rangos de donacion </mat-card-title>
+      </mat-card-content>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="PRIMER RANGO">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="200%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Rango</mat-card-title>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <p matLine class="text-muted">{{message.content}}</p>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="SEGUNDO RANGO">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Rango</mat-card-title>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <p matLine class="text-muted">{{message.content}}</p>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="TERCER RANGO">
+          <div fxLayout="row">
+            <div fxFlex.gt-sm="100%" >
+              <mat-card>
+                <mat-card-content>
+                  <mat-card-title>Rango</mat-card-title>
+                  <mat-list>
+                    <mat-list-item *ngFor="let message of messages">
+                      <p matLine class="text-muted">{{message.content}}</p>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- List with icons selection-->
+<!-- ============================================================== -->
+
+
+
+

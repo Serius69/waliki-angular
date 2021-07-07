@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+
 @Component({
   selector: 'app-snipper',
   templateUrl: './vistaProyecto.component.html',
@@ -16,6 +17,22 @@ export class VistaProyectoComponent {
       content: 'This is the material angular template',
       montoRequerido: '10000',
       montoRecaudado: '10000'
+    }
+
+  ];
+  actualizacion = [
+    {
+      titulo: 'Proyecto',
+      imagen: 'assets/images/users/1.jpg',
+      fecha: 'Material angular',
+      descripcion: 'This is the material angular template'
+    }
+
+  ];
+  rango = [
+    {
+      from: 'Entre 400 Bs 1000Bs',
+      descripcion: 'descripcion ...'
     }
 
   ];

@@ -14,8 +14,9 @@ import { MaterialRoutes } from './material.routing';
 
 import { ListaPADComponent } from './listaPAD/listaPAD.component';
 import { ListaProyectoComponent } from './listaProyecto/listaProyecto.component';
-import { ToolbarComponent } from './registroProyecto/toolbar.component';
+import { RegistroProyectoComponent } from './registroProyecto/registroProyecto.component';
 import { VistaProyectoComponent } from './vistaProyecto/vistaProyecto.component';
+import { TableBasicExampleComponent } from './listaPAD/table-basic-example/table-basic-example.component';
 
 
 @NgModule({
@@ -33,8 +34,9 @@ import { VistaProyectoComponent } from './vistaProyecto/vistaProyecto.component'
   declarations: [
     ListaPADComponent,
     ListaProyectoComponent,
-    ToolbarComponent,
+    RegistroProyectoComponent,
     VistaProyectoComponent,
+    TableBasicExampleComponent,
   ]
 })
 export class MaterialComponentsModule {}
