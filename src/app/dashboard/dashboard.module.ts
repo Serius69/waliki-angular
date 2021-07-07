@@ -11,6 +11,7 @@ import { StickerComponent } from './dashboard-components/sticker/sticker.compone
 import { ContactsComponent } from './dashboard-components/contacts/contacts.component';
 import { ActivityComponent } from './dashboard-components/activity/activity.component';
 import { MenuComponent } from './dashboard-components/menu/menu.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { MenuComponent } from './dashboard-components/menu/menu.component';
     DemoMaterialModule,
     FlexLayoutModule,
     ChartistModule,
-    RouterModule.forChild(DashboardRoutes)
+    RouterModule.forChild(DashboardRoutes),
+    FormsModule
   ],
   // tslint:disable-next-line:max-line-length
   declarations: [DashboardComponent, VisiterGraphComponent, StickerComponent, ContactsComponent, ActivityComponent, MenuComponent]
