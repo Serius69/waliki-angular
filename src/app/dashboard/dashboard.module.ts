@@ -6,9 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 import { ChartistModule } from 'ng-chartist';
-import { VisiterGraphComponent } from './dashboard-components/visiter-graph/visiter-graph.component';
-import { StickerComponent } from './dashboard-components/sticker/sticker.component';
-import { ContactsComponent } from './dashboard-components/contacts/contacts.component';
+import { StickerComponent } from './dashboard-components/aboutUs/sticker.component';
 import { ActivityComponent } from './dashboard-components/activity/activity.component';
 import { MenuComponent } from './dashboard-components/menu/menu.component';
 import {FormsModule} from '@angular/forms';
@@ -23,6 +21,6 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   // tslint:disable-next-line:max-line-length
-  declarations: [DashboardComponent, VisiterGraphComponent, StickerComponent, ContactsComponent, ActivityComponent, MenuComponent]
+  declarations: [DashboardComponent, StickerComponent, ActivityComponent, MenuComponent]
 })
 export class DashboardModule {}

@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Proyecto Nro </mat-card-title>
+    <mat-card-subtitle>Proyectos en proceso de seleccion</mat-card-subtitle>
+    <mat-list>
+      <mat-list-item *ngFor="let message of messages">
+        <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
+        <h3 matLine>{{message.from}}</h3>
+        <p matLine class="text-muted">{{message.content}}</p>
+        <p matLine class="text-muted">{{message.montoRequerido}}</p>
+        <p matLine class="text-muted">{{message.montoRecaudado}}</p>
+        <button mat-raised-button color="primary">Donar</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%" >
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Determinate progress-bar</mat-card-title>
+        <mat-card-subtitle><code>&lt;mat-progress-bar mode="determinate"&gt;</code> is a horizontal progress-bar for indicating progress and activity.</mat-card-subtitle>
+        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

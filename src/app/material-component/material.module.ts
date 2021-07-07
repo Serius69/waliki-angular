@@ -11,26 +11,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialRoutes } from './material.routing';
-import { ButtonsComponent } from './buttons/buttons.component';
 
-import { GridComponent } from './grid/grid.component';
-import { ListsComponent } from './lists/lists.component';
-import { MenuComponent } from './menu/menu.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { StepperComponent } from './stepper/stepper.component';
-import { ExpansionComponent } from './expansion/expansion.component';
-import { ChipsComponent } from './chips/chips.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { ProgressSnipperComponent } from './progress-snipper/progress-snipper.component';
-import { ProgressComponent } from './progress/progress.component';
-import {
-  DialogComponent,
-  DialogOverviewExampleDialogComponent
-} from './dialog/dialog.component';
-import { TooltipComponent } from './tooltip/tooltip.component';
-import { SnackbarComponent } from './snackbar/snackbar.component';
-import { SliderComponent } from './slider/slider.component';
-import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import { ListaPADComponent } from './listaPAD/listaPAD.component';
+import { ListaProyectoComponent } from './listaProyecto/listaProyecto.component';
+import { ToolbarComponent } from './registroProyecto/toolbar.component';
+import { VistaProyectoComponent } from './vistaProyecto/vistaProyecto.component';
+
 
 @NgModule({
   imports: [
@@ -44,25 +30,11 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
     CdkTableModule
   ],
   providers: [],
-  entryComponents: [DialogOverviewExampleDialogComponent],
   declarations: [
-    ButtonsComponent,
-    GridComponent,
-    ListsComponent,
-    MenuComponent,
-    TabsComponent,
-    StepperComponent,
-    ExpansionComponent,
-    ChipsComponent,
+    ListaPADComponent,
+    ListaProyectoComponent,
     ToolbarComponent,
-    ProgressSnipperComponent,
-    ProgressComponent,
-    DialogComponent,
-    DialogOverviewExampleDialogComponent,
-    TooltipComponent,
-    SnackbarComponent,
-    SliderComponent,
-    SlideToggleComponent
+    VistaProyectoComponent,
   ]
 })
 export class MaterialComponentsModule {}
