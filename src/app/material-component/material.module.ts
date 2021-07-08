@@ -17,6 +17,9 @@ import { ListaProyectoComponent } from './listaProyecto/listaProyecto.component'
 import { RegistroProyectoComponent } from './registroProyecto/registroProyecto.component';
 import { VistaProyectoComponent } from './vistaProyecto/vistaProyecto.component';
 import { TableBasicExampleComponent } from './listaPAD/table-basic-example/table-basic-example.component';
+import { CrudComponentsComponent } from './listaProyecto/proyectos-vigentes/crud-components.component';
+import { ProyectosFinalizadosComponent } from './listaProyecto/proyectos-finalizados/proyectos-finalizados.component';
+import { ProyectosProcesoComponent } from './listaProyecto/proyectos-proceso/proyectos-proceso.component';
 
 
 @NgModule({
@@ -37,6 +40,9 @@ import { TableBasicExampleComponent } from './listaPAD/table-basic-example/table
     RegistroProyectoComponent,
     VistaProyectoComponent,
     TableBasicExampleComponent,
+    CrudComponentsComponent,
+    ProyectosFinalizadosComponent,
+    ProyectosProcesoComponent,
   ]
 })
 export class MaterialComponentsModule {}

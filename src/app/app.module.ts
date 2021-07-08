@@ -20,6 +20,9 @@ import { SpinnerComponent } from './shared/spinner.component';
 import {initializeKeycloak} from './utility/app.init';
 import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
 
+import { Proyecto } from './model/proyecto';
+import {ProyectoService } from './service/proyecto.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +48,12 @@ import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
       useFactory: initializeKeycloak,
       multi: true,
       deps: [KeycloakService],
-
+    },
+    {
+      provide: ProyectoService
     }
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -4,4 +4,5 @@ export interface Proyecto {
   descripcion: string;
   montoRecaudar: string;
   estado: string;
+  imageUrl: string;
 }

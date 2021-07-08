@@ -26,4 +26,8 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>(`${this.apiServerUrl}/estado/4`);
   }
 
+  public addEmployee(employee: Proyecto): Observable<Proyecto> {
+    return this.http.post<Proyecto>(`${this.apiServerUrl}/employee/add`, employee);
+  }
+
 }

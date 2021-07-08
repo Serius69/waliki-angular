@@ -26,14 +26,8 @@
                   <mat-card-title>Proyectos Vigentes</mat-card-title>
                   <mat-card-subtitle>Algunos de los proyectos que aun se puede donar</mat-card-subtitle>
                   <mat-list>
-                    <mat-list-item *ngFor="let message of messages">
-                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
-                      <h3 matLine>{{message.from}}</h3>
-                      <p matLine class="text-muted">{{message.content}}</p>
-                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
-                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
-                      <button mat-raised-button color="primary">Donar</button>
-                    </mat-list-item>
+                    <app-crud-components >
+                    </app-crud-components>
                   </mat-list>
                 </mat-card-content>
               </mat-card>
@@ -48,16 +42,8 @@
                   <mat-card-title>Proyectos en proceso</mat-card-title>
                   <mat-card-subtitle>Proyectos en proceso de seleccion</mat-card-subtitle>
                   <mat-list>
-                    <mat-list-item *ngFor="let message of messages">
-                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
-                      <h3 matLine>{{message.from}}</h3>
-                      <p matLine class="text-muted">{{message.content}}</p>
+                    <app-proyectos-proceso></app-proyectos-proceso>
 
-                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
-                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
-                      <button mat-raised-button color="primary">Donar</button>
-                    </mat-list-item>
-                    <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
                   </mat-list>
                 </mat-card-content>
               </mat-card>
@@ -72,14 +58,7 @@
                   <mat-card-title>Proyectos Finalizados</mat-card-title>
                   <mat-card-subtitle>Algunos de los proyectos que ya finalizaron</mat-card-subtitle>
                   <mat-list>
-                    <mat-list-item *ngFor="let message of messages">
-                      <img mat-list-avatar [src]="message.image" alt="Image of {{message.from}}">
-                      <h3 matLine>{{message.from}}</h3>
-                      <p matLine class="text-muted">{{message.content}}</p>
-                      <p matLine class="text-muted">{{message.montoRequerido}}</p>
-                      <p matLine class="text-muted">{{message.montoRecaudado}}</p>
-                      <button mat-raised-button color="primary">Ver </button>
-                    </mat-list-item>
+                    <app-proyectos-finalizados></app-proyectos-finalizados>
 
 
                   </mat-list>
