@@ -1,0 +1,21 @@
+<!-- Proyecto -->
+
+<mat-list-item *ngFor="let employee of proyectosF" id="proyecto-vigente">
+  <img src="{{employee?.imageUrl}}">
+  <h3 matLine>{{employee.nombreProyecto}}</h3>
+  <button mat-raised-button color="primary">Donar</button>
+</mat-list-item>
+
+<!-- NO DATA -->
+<mat-list-item *ngIf="proyectosF?.length == 0">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">No Data</h4>
+    <p>No se encontro proyectos.</p>
+  </div>
+
+
+
+
+</mat-list-item>
+
+
