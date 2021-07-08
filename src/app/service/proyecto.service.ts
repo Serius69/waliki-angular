@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Proyecto } from '../objetos-model/proyecto';
+import { Proyecto } from '../model/proyecto';
 import { environment } from 'src/environments/environment';
 
 @Injectable({providedIn: 'root'})
@@ -19,6 +19,10 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>(`${this.apiServerUrl}/estado/3`);
   }
   public getProyectos(): Observable<Proyecto[]> {
+    return this.http.get<Proyecto[]>(`${this.apiServerUrl}/estado/4`);
+  }
+  // pantalla principal
+  public paginaPrincipal(): Observable<Proyecto[]> {
     return this.http.get<Proyecto[]>(`${this.apiServerUrl}/estado/4`);
   }
 

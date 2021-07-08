@@ -5,7 +5,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 // import {Employee} from './employee';
 
 import { ProyectoService } from '../../../service/proyecto.service';
-import {Proyecto} from '../../../objetos-model/proyecto';
+import {Proyecto} from '../../../model/proyecto';
 
 @Component({
   selector: 'app-menu',
@@ -13,20 +13,18 @@ import {Proyecto} from '../../../objetos-model/proyecto';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
   public proyectoo: Proyecto[] = [];
 
-  constructor(private employeeService: ProyectoService) { }
+  constructor(private proyectoService: ProyectoService) { }
 
   ngOnInit(): void {
     this.getProyectos();
   }
 
   public getProyectos(): void {
-    this.employeeService.getProyectos().subscribe(
-      (response: Proyecto[]) => {
-        this.proyectoo = response;
+    this.proyectoService.paginaPrincipal().subscribe(
+      (status: Proyecto[]) => {
+        this.proyectoo = status;
         console.log(this.proyectoo);
       },
       (error: HttpErrorResponse) => {
