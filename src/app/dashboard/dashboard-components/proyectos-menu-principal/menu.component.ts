@@ -5,11 +5,11 @@ import {HttpErrorResponse} from '@angular/common/http';
 // import {Employee} from './employee';
 
 import { ProyectoService } from '../../../service/proyecto.service';
-import {Proyecto} from '../../../model/proyecto';
+import {Proyecto} from '../../../objetos-model/proyecto';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
+  templateUrl: './proyectos-menu-principal.component.html',
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
