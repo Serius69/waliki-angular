@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-tab-group>
+        <!-- Tab 1 -->
+        <mat-tab label="Donaciones">
+            <mat-card-content>
+                <div class="d-flex no-blcok" *ngFor='let donaciones of donaciones'>
+                    <div class="m-r-20">
+                        <img class="img-circle" width="50" [src]=donaciones.imageDonador alt="Image"> </div>
+                    <div class="p-b-20 b-b m-b-30">
+                        <h4 class="m-0">{{donaciones.nombreDonador}}
+                            <small class="text-muted">({{donaciones.comentario}})</small>
+                        </h4>
+                        <p class="text-muted">{{donaciones.montoDonacion}}</p>
+                      <img class="img-responsive rounded" [src]=donaciones.imageProyecto  alt="Image">
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-tab>
+        <!-- End Tab 1 -->
+    </mat-tab-group>
+</mat-card>
+<!-- NO DATA -->
+<mat-card *ngIf="donaciones?.length == 0">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">No Data</h4>
+    <p>No se encontro donaciones.</p>
+  </div>
+</mat-card>

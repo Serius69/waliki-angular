@@ -3,7 +3,7 @@ import {NgForm} from '@angular/forms';
 import {HttpErrorResponse} from '@angular/common/http';
 // import { EmployeeService } from './employee.service';
 // import {Employee} from './employee';
-
+import { Observable, Subject } from 'rxjs';
 import { ProyectoService } from '../../../service/proyecto.service';
 import {Proyecto} from '../../../model/proyecto';
 
@@ -16,6 +16,10 @@ export class MenuComponent implements OnInit {
   public proyectoo: Proyecto[] = [];
 
   constructor(private proyectoService: ProyectoService) { }
+
+  studentsArray: any[] = [];
+  // dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
 
   ngOnInit(): void {
     this.getProyectos();
@@ -32,8 +36,24 @@ export class MenuComponent implements OnInit {
       }
     );
   }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Tabla
 export interface PeriodicElement {
   name: string;

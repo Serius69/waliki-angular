@@ -3,9 +3,6 @@
 <mat-list-item *ngFor="let employee of proyectos" id="proyecto-vigente">
   <img src="{{employee?.imageUrl}}">
   <h3 matLine>{{employee.nombreProyecto}}</h3>
-  <p matLine class="text-muted">{{editProyecto.descripcion}}</p>
-
-  <p matLine class="text-muted">{{editProyecto.montoRecaudar}}</p>
   <button mat-raised-button color="primary">Donar</button>
 </mat-list-item>
 

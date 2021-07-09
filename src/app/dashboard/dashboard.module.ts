@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 import { ChartistModule } from 'ng-chartist';
 import { StickerComponent } from './dashboard-components/aboutUs/sticker.component';
-import { ActivityComponent } from './dashboard-components/activity/activity.component';
+import { ActivityComponent } from './dashboard-components/activity-pagina-principal/activity.component';
 import { MenuComponent } from './dashboard-components/proyectos-menu-principal/menu.component';
 import {FormsModule} from '@angular/forms';
 

@@ -1,24 +1,17 @@
 <!-- Mostrar los proyectos -->
 
-<div class="container" id="main-container">
-  <div class="row">
+
     <div *ngFor="let proyecto of proyectoo" class="col-md-6 col-xl-3">
       <div class="card m-b-30">
         <div class="card-body row">
           <div class="col-6 card-title align-self-center mb-0">
             <!-- Mostrar los proyectos  -->
-            <h5>{{proyecto?.nombreProyecto}}</h5>
-            <p class="m-0">{{proyecto?.descripcion}}</p>
+            <h5>{{proyecto.nombreProyecto}}</h5>
+            <p class="m-0">{{proyecto.descripcion}}</p>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{proyecto?.montoRecaudar}}</li>
-          <li class="list-group-item"><i class="fa fa-phone float-right"></i>estado : {{proyecto?.estado}}</li>
-        </ul>
       </div>
     </div>
-  </div>
-</div>
 
 <!-- Notification for no employees -->
 <div *ngIf="proyectoo?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
